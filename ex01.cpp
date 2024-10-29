@@ -1,6 +1,11 @@
 #include <iostream>
 #include <string>
 
+// Escreva um programa que leia o primeiro nome e 3 notas de um aluno.
+// Exiba na tela uma mensagem com o nome e a média do aluno.
+// Exiba também, se ele reprovou, passou ou está em recuperação.
+// Considere a média ponderada, sendo os pesos 3, 4 e 5, respectivamente, das notas 1, 2 e 3.
+
 int main(){
 
     std::string nome;
