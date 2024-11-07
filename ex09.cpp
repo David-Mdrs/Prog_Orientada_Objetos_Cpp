@@ -23,24 +23,26 @@ int main(){
     std::cout << std::endl;
 
 
-    for(int i = 0; i < 5; i++)
-        (i != 2) ? std::cout << ' ' : std::cout << '*';
-    std::cout << std::endl;
-    for(int i = 0; i < 5; i++)
-        (i == 0 || i == 4) ? std::cout << ' ' : std::cout << '*';
-    std::cout << std::endl;
-    for(int i = 0; i < 5; i++)
-        std::cout << '*';
-    std::cout << std::endl;
-    for(int i = 0; i < 5; i++)
-        (i == 0 || i == 4) ? std::cout << ' ' : std::cout << '*';
-    std::cout << std::endl;
-    for(int i = 0; i < 5; i++)
-        (i != 2) ? std::cout << ' ' : std::cout << '*';
-    std::cout << std::endl;
+    int esq{4}, dir{4};
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 10; j++){
+            (j < esq || j > dir) ? std::cout << ' ' : std::cout << '*';
+        }
+        std::cout << std::endl;
+        esq--;
+        dir++;
+    }
+    for(int i = 0; i < 5; i++){
+        esq++;
+        dir--;
+        for(int j = 0; j < 10; j++){
+            (j < esq || j > dir) ? std::cout << ' ' : std::cout << '*';
+        }
+        std::cout << std::endl;
+    }
     std::cout << std::endl;
 
-    int esq{4}, dir{4};
+    esq = 4, dir = 4;
     for(int i = 0; i < 5; i++){
         for(int j = 0; j < 10; j++){
             (j < esq || j > dir) ? std::cout << ' ' : std::cout << '*';
