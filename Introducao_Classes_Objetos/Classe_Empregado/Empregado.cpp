@@ -6,21 +6,21 @@ Empregado::Empregado(string nome, string sobrenome, double salario){
     setSalario(salario);
 }
 
-string Empregado::getNome(){
+string Empregado::getNome() const {
     return m_nome;
 }
 void Empregado::setNome(string nome){
     m_nome = (nome.empty() ? "Indefinido!" : nome);
 }
 
-string Empregado::getSobrenome(){
+string Empregado::getSobrenome() const {
     return m_sobrenome;
 }
 void Empregado::setSobrenome(string sobrenome){
     m_sobrenome = (sobrenome.empty() ? "Indefinido!" : sobrenome);
 }
 
-double Empregado::getSalario(){
+double Empregado::getSalario() const {
     return m_salario;
 
 }

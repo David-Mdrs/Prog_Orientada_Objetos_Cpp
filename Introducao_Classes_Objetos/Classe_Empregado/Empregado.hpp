@@ -7,13 +7,13 @@ class Empregado{
 public:
     Empregado(string nome, string sobrenome, double salario);
     
-    string getNome();
+    string getNome() const ;
     void setNome(string nome);
     
-    string getSobrenome();
+    string getSobrenome() const ;
     void setSobrenome(string sobrenome);
     
-    double getSalario();
+    double getSalario() const ;
     void setSalario(double salario);
     
     void aumento(double aumento);
