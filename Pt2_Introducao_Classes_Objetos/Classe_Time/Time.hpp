@@ -4,7 +4,8 @@
 
 class Time {
 public:
-  Time(int = 0, int = 0 , int = 0);
+  Time(int, int = 0 , int = 0);
+  Time();
 
   void setTime(int , int , int);
   void setHour(int h) { hour = (h >=0 && h < 24) ? h : 0; }

@@ -20,7 +20,11 @@ int main() {
     // Analisando mudanças nos objetos
     std::cout << t1.toUniversal() << std::endl;
 	std::cout << t2.toUniversal() << std::endl;
-	std::cout << t3.toUniversal() << std::endl;
+	std::cout << t3.toUniversal() << std::endl << std::endl;
+	
+	// Inicializando objeto com horário do sistema
+	Time t{};
+    std::cout << t.toUniversal() << std::endl;
 
 	return 0;
 }
