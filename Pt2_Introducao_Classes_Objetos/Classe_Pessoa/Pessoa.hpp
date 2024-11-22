@@ -8,7 +8,7 @@ using std::string, std::format;
 class Pessoa{
 public:
 
-    Pessoa(string nome, string cpf = "00000000000", string validade = "Inválido");
+    Pessoa(string nome, string cpf = "00000000000");
 
     string getNome() const;
     void setNome(string nome);
@@ -19,9 +19,8 @@ public:
     string apresentar() const;
 
 private:
-    void setCpfValido();
 
     string m_nome;
     string m_cpf;
-    string m_cpfValido;
+    bool m_cpfValido;
 };
