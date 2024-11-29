@@ -7,15 +7,15 @@ using std::string;
 
 class Varinha{
 public:
-    Varinha(string madeira, string nucleo, float comprimento);
+    Varinha(const string madeira, const string nucleo, const float comprimento);
     
     string getTipoMadeira() const { return m_tipoMadeira; }
     string getNucleo() const { return m_nucleo; }
     float getComprimento() const { return m_comprimento; }
 
-    void setTipoMadeira(string madeira) { m_tipoMadeira = (madeira.empty() ? "Nenhum" : madeira); }
-    void setNucleo(string nucleo) { m_nucleo = (nucleo.empty() ? "Nenhum" : nucleo); }
-    void setComprimento(float comprimento) { m_comprimento  = (comprimento <= 0 || comprimento > 40 ? 0 : comprimento); }
+    void setTipoMadeira(const string madeira) { m_tipoMadeira = (madeira.empty() ? "Nenhum" : madeira); }
+    void setNucleo(const string nucleo) { m_nucleo = (nucleo.empty() ? "Nenhum" : nucleo); }
+    void setComprimento(const float comprimento) { m_comprimento  = (comprimento <= 0 || comprimento > 40 ? 0 : comprimento); }
     
     void display() const;
 

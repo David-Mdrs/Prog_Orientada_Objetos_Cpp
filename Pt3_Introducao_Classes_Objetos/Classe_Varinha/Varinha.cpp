@@ -1,6 +1,6 @@
 #include "Varinha.hpp"
 
-    Varinha::Varinha(string madeira, string nucleo, float comprimento){
+    Varinha::Varinha(const string madeira, const string nucleo, const float comprimento){
         setTipoMadeira(madeira);
         setNucleo(nucleo);
         setComprimento(comprimento);
