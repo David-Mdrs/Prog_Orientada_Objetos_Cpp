@@ -13,9 +13,9 @@ public:
     string getNucleo() const { return m_nucleo; }
     float getComprimento() const { return m_comprimento; }
 
-    void setTipoMadeira(string madeira) { m_tipoMadeira = madeira; }
-    void setNucleo(string nucleo) { m_nucleo = nucleo; }
-    void setComprimento(float comprimento) { m_comprimento = comprimento; }
+    void setTipoMadeira(string madeira) { m_tipoMadeira = (madeira.empty() ? "Nenhum" : madeira); }
+    void setNucleo(string nucleo) { m_nucleo = (nucleo.empty() ? "Nenhum" : nucleo); }
+    void setComprimento(float comprimento) { m_comprimento  = (comprimento <= 0 || comprimento > 40 ? 0 : comprimento); }
     
     void display() const;
 
