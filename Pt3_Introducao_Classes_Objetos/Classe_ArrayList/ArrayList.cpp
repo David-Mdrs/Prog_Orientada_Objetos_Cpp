@@ -35,6 +35,46 @@ void ArrayList::print() const {
   std::cout << std::endl;
 }
 
+int ArrayList::busca(const int indice) const {
+    if(indice >= posicao || indice < 0) {
+        throw std::out_of_range("Índice não existe no ArrayList!");
+    }
+    return arr[indice];
+}
+
+void ArrayList::remover(int indice) {
+    if(indice >= posicao || indice < 0) {
+        throw std::out_of_range("Índice não existe no ArrayList!");
+    }
+    if (posicao <= 0) {
+        throw std::out_of_range("ArrayList está vazio!");
+    }
+    for(int i = indice; i < posicao; i++) {
+        arr[i] = arr[i+1];
+    }
+    posicao--;
+}
+
+void ArrayList::removerEl(int elemento) {
+    if (posicao <= 0) {
+        throw std::out_of_range("ArrayList está vazio!");
+    }
+
+    int contador = 0;
+    for (int i = 0; i < posicao; i++) {
+        if (arr[i] == elemento) {
+            contador++;
+        } else {
+            arr[i - contador] = arr[i];
+        }
+    }
+    
+    posicao -= contador;
+    if (contador == 0) {
+        throw std::invalid_argument("Elemento não encontrado no ArrayList!");
+    }
+}
+
 void somaArray(ArrayList &array, const int soma) {
     if(array.posicao > 0) {
         for (int i = 0; i < array.posicao; i++) {

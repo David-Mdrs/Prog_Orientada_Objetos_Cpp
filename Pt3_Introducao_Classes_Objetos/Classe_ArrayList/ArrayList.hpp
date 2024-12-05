@@ -10,6 +10,10 @@ public:
 
   void print() const;
   
+  int busca(const int indice) const;
+  void remover(int indice);
+  void removerEl(int elemento);
+  
   friend void somaArray(ArrayList &array, const int soma);
   friend void subArray(ArrayList &array, const int subtracao);
   friend void mulArray(ArrayList &array, const int mul);
