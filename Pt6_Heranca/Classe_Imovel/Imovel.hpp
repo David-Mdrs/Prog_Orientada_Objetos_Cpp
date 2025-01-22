@@ -17,6 +17,7 @@ public:
     std::string endereco() const { return m_endereco; }
     double preco() const { return m_preco; }
     
+    // Métodos especiais da classe
     void dados() const;
 
 protected:
