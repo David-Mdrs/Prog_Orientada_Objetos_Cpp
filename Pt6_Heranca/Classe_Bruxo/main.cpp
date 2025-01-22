@@ -1,28 +1,32 @@
 #include <iostream>
+
+#include "Humano.hpp"
 #include "Bruxo.hpp"
+#include "Trouxa.hpp"
 
 int main() {
     
     // Criando objeto Bruxo
-    Bruxo bruxo{"Harry", "Grifinoria", "Expelliarmus"};
-    bruxo.lancarFeitico();
-    bruxo.dados();
-    
+    Bruxo bruxo{"Harry", 19, "Grifinoria", "Expelliarmus"};
+
     // Criando objeto Varinha
     Varinha varinha{"Carvalho", "Fênix", 35};
-    varinha.display();
-    
+
     // Agregando varinha ao bruxo
     bruxo.setVarinha(varinha);
-    bruxo.dados();
-    
+
     // Criando objeto CapaBruxo
     CapaBruxo capa{2.5, "Sonserina"};
-    capa.display();
-    
+
     // Agregando capa ao bruxo
     bruxo.setCapa(capa);
     bruxo.dados();
+    
+    Humano humano{"Clotilde", 30};
+    std::cout << humano.getNome();
+    
+    Trouxa trouxa{"Jerry", 30, "Engenheiro"};
+    trouxa.dados();
     
 	return 0;
 }

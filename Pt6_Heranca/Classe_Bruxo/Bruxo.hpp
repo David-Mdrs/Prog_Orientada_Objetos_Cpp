@@ -2,23 +2,23 @@
 
 #include <iostream>
 #include <string>
+
+#include "Humano.hpp"
 #include "Varinha.hpp"
 #include "CapaBruxo.hpp"
 
 using std::string;
 
-class Bruxo{
+class Bruxo : public Humano{
 public:
     // Construtores
-    Bruxo(const string nome, const string casa, const string feitico, Varinha *varinha = nullptr, CapaBruxo *capa = nullptr);
+    Bruxo(const string nome = "Nenhum", const int idade = 0, const string casa = "Nenhum", const string feitico = "Nenhum", Varinha *varinha = nullptr, CapaBruxo *capa = nullptr);
     
     // Funções get()
-    string getNome() const { return m_nome; }
     string getCasa() const { return m_casa; }
     string getFeitico() const { return m_feitico; }
 
     // Funções set()
-    void setNome(const string nome) { m_nome = (nome.empty() ? "Nenhum" : nome); }
     void setCasa(const string casa);
     void setFeitico(const string feitico) { m_feitico = (feitico.empty() ? "Nenhum" : feitico); }
     void setVarinha(Varinha& varinha) { m_varinha = &varinha; }
@@ -30,7 +30,6 @@ public:
 
     
 private:
-    string m_nome;
     string m_casa;
     string m_feitico;
     Varinha *m_varinha;
