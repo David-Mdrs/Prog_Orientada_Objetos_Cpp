@@ -9,5 +9,5 @@ void ImovelNovo::dados() const {
     "\nEndereço:    " << m_endereco <<
     "\nPreço:       " << m_preco << " R$" <<
     "\nAumento:     " << m_aumento << "%" <<
-    "\nPreço total: " << (m_preco * (m_aumento * 10)) << " R$" << std::endl << std::endl;
+    "\nPreço total: " << (m_preco * ((m_aumento + 100) / 100)) << " R$" << std::endl << std::endl;
 }

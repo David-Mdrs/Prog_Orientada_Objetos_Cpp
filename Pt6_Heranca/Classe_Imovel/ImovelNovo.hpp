@@ -14,7 +14,7 @@ public:
     
     // Métodos get()
     double getAumento() const { return m_aumento; }
-    double getValorTotal() const { return (m_preco * m_aumento); }
+    double getValorTotal() const { return (m_preco * ((m_aumento + 100) / 100)); }
     
     // Método especial da classe
     void dados() const;

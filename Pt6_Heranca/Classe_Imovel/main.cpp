@@ -2,6 +2,7 @@
 
 #include "Imovel.hpp"
 #include "ImovelNovo.hpp"
+#include "ImovelVelho.hpp"
 
 int main() {
     
@@ -12,6 +13,10 @@ int main() {
     // Exemplo com classe ImovelNovo
     ImovelNovo imovelNovo{"Santa Luzia", 3000.00, 10.0};
     imovelNovo.dados();
+    
+    // Exemplo com classe ImovelVelho
+    ImovelVelho imovelVelho{"João Pessoa", 9000.00, 15.0};
+    imovelVelho.dados();
     
 	return 0;
 }
