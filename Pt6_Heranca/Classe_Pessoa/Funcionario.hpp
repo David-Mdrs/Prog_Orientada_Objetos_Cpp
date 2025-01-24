@@ -2,37 +2,36 @@
 
 #include <iostream>
 #include <string>
-#include "PessoaFisica.hpp"
+#include <vector>
+#include "PessoaJuridica.hpp"
 
-class Funcionario : public PessoaFisica {
+#include "Funcionario.hpp"
+#include "Cliente.hpp"
+
+class Empresa : public PessoaJuridica {
 public:
     // Construtor
-    Funcionario(const std::string nome, const std::string cpf,
-        const std::string matricula, const double salario,
-        const double cargaHoraria, const double qntHorasMes);
+    Empresa(const std::string nome, const std::string cnpj, const std::string razaoSocial)
+    : PessoaJuridica{nome, cnpj, razaoSocial} {}
 
     // Métodos get()
-    std::string getMatricula() const { return m_matricula; }
-    double getSalario() const { return m_salario; }
-    double getCargaHoraria() const { return m_cargaHoraria; }
-    double getQntHorasMes() const { return m_qntHorasMes; }
+    std::vector<Funcionario> getFuncionarios() const { return m_listaFunc; }
+    std::vector<Cliente> getClientes() const { return m_listaCli; }
     
-    // Métodos set()
-    void setMatricula (const std::string matricula);
-    void setSalario (const double salario);
-    void setCargaHoraria (const double cargaHoraria);
-    void setQntHorasMes (const double qntHorasMes);
+    // Métodos pop()
+    void popFuncionario() { m_listaFunc.pop_back(); }
+    void popCliente() { m_listaCli.pop_back(); }
+    
+    // Métodos especiais da classe
+    void addFuncionario(const Funcionario &funcionario) { m_listaFunc.push_back(funcionario); }
+    void addCliente(const Cliente &cliente) { m_listaCli.push_back(cliente); }
     
     // Métodos especiais da classe
     void apresentar() const;
-    double salarioBruto() const;
-    
-    // Sobrecarga de "<<" para imprimir dados
-    friend std::ostream& operator<<(std::ostream &out, const Funcionario &funcionario);
+    void apresentarFunc() const;
+    void apresentarCli() const;
 
 private:
-    std::string m_matricula;
-    double m_salario;
-    double m_cargaHoraria;
-    double m_qntHorasMes;
+    std::vector<Funcionario> m_listaFunc;
+    std::vector<Cliente> m_listaCli;
 };

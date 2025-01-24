@@ -35,5 +35,11 @@ int main() {
     empresa.addCliente(cl);
     empresa.apresentarCli();
     
+    empresa.popFuncionario();
+    empresa.apresentarFunc();
+    
+    empresa.popCliente();
+    empresa.apresentarCli();
+    
     return 0;
 }
