@@ -17,7 +17,7 @@ void PessoaJuridica::setRazaoSocial(const std::string razaoSocial) {
 
 void PessoaJuridica::apresentar() const {
     std::cout << "========== PESSOA JURÍDICA =========" << std::endl <<
-    "Nome: " << m_nome << std::endl <<
-    "Cnpj: " << m_cnpj << std::endl <<
-    "Razão Social: " << m_razaoSocial << std::endl <<std::endl;
+    "Nome: " << getNome() << std::endl <<
+    "Cnpj: " << getCnpj() << std::endl <<
+    "Razão Social: " << getRazaoSocial() << std::endl <<std::endl;
 }

@@ -10,6 +10,6 @@ void PessoaFisica::setCpf(const std::string cpf) {
 
 void PessoaFisica::apresentar() const {
     std::cout << "=========== PESSOA FÍSICA ==========" << std::endl <<
-    "Nome: " << m_nome << std::endl <<
-    "Cpf: " << m_cpf << std::endl << std::endl;
+    "Nome: " << getNome() << std::endl <<
+    "Cpf: " << getCpf() << std::endl << std::endl;
 }

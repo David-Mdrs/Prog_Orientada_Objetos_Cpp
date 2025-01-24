@@ -10,5 +10,5 @@ void Pessoa::setNome(std::string nome) {
 
 void Pessoa::apresentar() const {
     std::cout << "============== PESSOA ==============" << std::endl <<
-    "Nome: " << m_nome << std::endl << std::endl;
+    "Nome: " << getNome() << std::endl << std::endl;
 }
