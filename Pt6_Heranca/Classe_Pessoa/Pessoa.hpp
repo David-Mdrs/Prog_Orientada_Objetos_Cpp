@@ -17,6 +17,6 @@ public:
     // Método especial da classe
     void apresentar() const;
 
-protected:
+private:
     std::string m_nome;
 };
