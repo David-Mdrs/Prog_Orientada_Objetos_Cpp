@@ -1,24 +1,25 @@
 #include <iostream>
-#include "Pessoa.hpp"
-#include "PessoaFisica.hpp"
-#include "PessoaJuridica.hpp"
+
+#include "Pessoa.hpp"           // Opcional
+#include "PessoaFisica.hpp"     // Opcional
+#include "PessoaJuridica.hpp"   // Opcional
+
+#include "Cliente.hpp"
 
 int main() {
 
-    Pessoa p1{""};
-    p1.apresentar();
-    
-    Pessoa p2{"Paulo"};
-    p2.apresentar();
+    Pessoa p{"Paulo"};
+    p.apresentar();
     
     PessoaFisica pf{"David", "23465423490"};
     pf.apresentar();
+
     
-    PessoaJuridica pj{"Bruno", "93749582740583"};
+    PessoaJuridica pj{"Maria", "94857263540184", "Maria Silva LTDA"};
     pj.apresentar();
-    
-    PessoaJuridica pj2{"Maria", "94857263540184", "Maria Silva LTDA"};
-    pj2.apresentar();
+
+    Cliente cl{"Maercio", "25764076524", "81928576039", "Campina Grande - PB"};
+    cl.apresentar();
 
     return 0;
 }

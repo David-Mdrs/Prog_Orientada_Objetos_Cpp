@@ -8,7 +8,7 @@
 class PessoaFisica : public Pessoa {
 public:
     // Construtores
-    PessoaFisica(const std::string nome = "Sem registro", const std::string cpf = "00000000000");
+    PessoaFisica(const std::string nome, const std::string cpf = "00000000000");
 
     // Métodos get()
     std::string getCpf() const { return m_cpf; }
@@ -19,6 +19,6 @@ public:
     // Método especial da classe
     void apresentar() const;
 
-private:
+protected:
     std::string m_cpf;
 };
