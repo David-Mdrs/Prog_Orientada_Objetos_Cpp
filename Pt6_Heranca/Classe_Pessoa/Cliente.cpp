@@ -23,3 +23,14 @@ void Cliente::apresentar() const {
     "Telefone: " << m_telefone << std::endl <<
     "Endereço: " << m_endereco << std::endl << std::endl;
 }
+
+
+// Sobrecarga de "<<" para imprimir dados
+std::ostream& operator<<(std::ostream &out, const Cliente &cliente) {
+    out << "============= CLIENTE ============" << std::endl <<
+    "Nome: " << cliente.m_nome << std::endl <<
+    "Cpf: " << cliente.m_cpf << std::endl <<
+    "Telefone: " << cliente.m_telefone << std::endl <<
+    "Endereço: " << cliente.m_endereco << std::endl << std::endl;
+    return out;
+}

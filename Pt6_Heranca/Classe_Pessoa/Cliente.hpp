@@ -21,6 +21,9 @@ public:
     // Métodos especiais da classe
     void apresentar() const;
     
+    // Sobrecarga de "<<" para imprimir dados
+    friend std::ostream& operator<<(std::ostream &out, const Cliente &cliente);
+    
 private:
     std::string m_telefone;
     std::string m_endereco;

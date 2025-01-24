@@ -20,6 +20,9 @@ int main() {
 
     Cliente cl{"Maercio", "25764076524", "81928576039", "Campina Grande - PB"};
     cl.apresentar();
+    
+    // Imprimindo dados com sobrecarga de operador para desvio de fluxo
+    std::cout << cl;
 
     return 0;
 }
