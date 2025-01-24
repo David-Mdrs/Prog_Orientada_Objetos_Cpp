@@ -18,15 +18,21 @@ public:
     std::vector<Funcionario> getFuncionarios() const { return m_listaFunc; }
     std::vector<Cliente> getClientes() const { return m_listaCli; }
     
+    // Métodos pop()
+    void popFuncionario() { m_listaFunc.pop_back(); }
+    void popCliente() { m_listaCli.pop_back(); }
+    
     // Métodos especiais da classe
     void addFuncionario(const Funcionario &funcionario) { m_listaFunc.push_back(funcionario); }
     void addCliente(const Cliente &cliente) { m_listaCli.push_back(cliente); }
     
     // Métodos especiais da classe
+    double calcularFolhaPagamento() const;
+    
     void apresentar() const;
     void apresentarFunc() const;
     void apresentarCli() const;
-
+    
 private:
     std::vector<Funcionario> m_listaFunc;
     std::vector<Cliente> m_listaCli;
