@@ -19,13 +19,11 @@ int main() {
     PessoaJuridica pj{"Maria", "94857263540184", "Maria Silva LTDA"};
     pj.apresentar();
 
-    // Imprimindo dados com sobrecarga de operador para desvio de fluxo
     Cliente cl{"Maercio", "25764076524", "81928576039", "Campina Grande - PB"};
-    // cl.apresentar();
-    std::cout << cl;
+    std::cout << cl;    // Apresentando com sobrecarga
     
     Funcionario func{"Clarice", "23483637895", "25003", 1500, 80, 75};
-    func.apresentar();
+    std::cout << func;  // Apresentando com sobrecarga
 
     return 0;
 }

@@ -26,6 +26,9 @@ public:
     // Métodos especiais da classe
     void apresentar() const;
     double salarioBruto() const;
+    
+    // Sobrecarga de "<<" para imprimir dados
+    friend std::ostream& operator<<(std::ostream &out, const Funcionario &funcionario);
 
 private:
     std::string m_matricula;

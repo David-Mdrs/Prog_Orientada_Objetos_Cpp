@@ -39,3 +39,16 @@ double Funcionario::salarioBruto() const {
     return getSalario() * getQntHorasMes()/getCargaHoraria();
 }
 
+// Sobrecarga de "<<" para imprimir dados
+std::ostream& operator<<(std::ostream &out, const Funcionario &funcionario) {
+    out << "============ FUNCIONÁRIO ===========" << std::endl <<
+    "Nome: " << funcionario.getNome() << std::endl <<
+    "Cpf: " << funcionario.getCpf() << std::endl <<
+    "Matrícula: " << funcionario.getMatricula() << std::endl <<
+    "Sálario: " << funcionario.getSalario() << std::endl <<
+    "Carga horária: " << funcionario.getCargaHoraria() << std::endl <<
+    "Horas mensais trabalhadas: " << funcionario.getQntHorasMes() << std::endl <<
+    "Salário bruto total: " << funcionario.salarioBruto() << std::endl << std::endl;
+    return out;
+}
+
