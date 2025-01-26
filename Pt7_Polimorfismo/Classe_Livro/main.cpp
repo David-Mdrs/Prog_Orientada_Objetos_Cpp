@@ -8,14 +8,24 @@ using std::cout;
 
 int main() {
 
+    Livro *li{nullptr};
+
     Livro livro{};
-    livro.ler();
-    
     LivroMonstruosoDosMonstros livroMostruoso{};
-    livroMostruoso.ler();
+    LivroInvisivelDaInvisibilidade livroInvisivel{};
+
+    std::cout << "Livro criado!" << std::endl <<
+    "Livro monstruoso criado!" << std::endl <<
+    "Livro invisível criado!" << std::endl << std::endl;
+    
+    li = &livro;
+    li->ler();
+    
+    li = &livroMostruoso;
+    li->ler();
 	
-	LivroInvisivelDaInvisibilidade livroInvisivel{};
-	livroInvisivel.ler();
+	li = &livroInvisivel;
+	li->ler();
 	
 	return 0;
 }

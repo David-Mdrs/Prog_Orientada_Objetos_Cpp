@@ -7,5 +7,5 @@ void Livro::ler() const {
     std::cout << "Título: " << m_titulo << std::endl <<
         "Ano: " << m_ano << std::endl <<
         "Paginas: " << m_paginas << std::endl <<
-        "Conteudo: " << m_conteudo << std::endl;
+        "Conteudo: " << m_conteudo << std::endl << std::endl;
 }

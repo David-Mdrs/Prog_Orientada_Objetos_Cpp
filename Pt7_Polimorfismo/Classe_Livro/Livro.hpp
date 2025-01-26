@@ -8,6 +8,9 @@ public:
     // Construtor
     Livro(const std::string titulo = "Nenhum", int ano = 0, int paginas = 0, const std::string conteudo = "Nenhum");
     
+    // Destrutor
+    virtual ~Livro() { std::cout << "Destruindo livro!" << std::endl; }
+    
     // Métodos set()
     void setTitulo(const std::string titulo) { m_titulo = titulo; }
     void setAno(const int ano) { m_ano = ano; }
@@ -21,7 +24,7 @@ public:
     std::string getConteudo() const { return m_conteudo; }
     
     // Métodos especiais da classe
-    void ler() const;
+    virtual void ler() const;
     
 private:
     std::string m_titulo;

@@ -5,6 +5,6 @@
 
 class LivroMonstruosoDosMonstros : public Livro {
 public:
-    LivroMonstruosoDosMonstros() { std::cout << "Livro monstruoso criado!" << std::endl; }
-    void ler() const { std::cout << "Mastiga, mastiga, mastiga, mastiga..." << std::endl; }
+    LivroMonstruosoDosMonstros() {}
+    void ler() const override { std::cout << "Mastiga, mastiga, mastiga, mastiga..." << std::endl << std::endl; }
 };
