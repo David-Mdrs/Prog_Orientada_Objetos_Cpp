@@ -12,7 +12,7 @@ Continuarei a aprimorar este repositório, focando na `clareza e legibilidade do
 
 ## 🛠️ Contribuições
 
-Para contribuir com `<Estrutura_de_Dados_C>`, siga estas etapas:
+Para contribuir com `<Prog_Orientada_Objetos_Cpp>`, siga estas etapas:
 
 1. Bifurque este repositório em `fork`.
 2. Clone seu repositório: `git clone <URL_do_repositório>`.
