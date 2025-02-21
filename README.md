@@ -6,10 +6,6 @@ Ao explorar a `Programação Orientada a Objetos` (POO) em `C++`, me aprofundei 
 
 Além disso, foi durante esta disciplina que tive meus primeiros contatos com a `linguagem de programação C++`, o que proporcionou um aprendizado valioso sobre suas particularidades. Entre elas, explorei conceitos como a `sobrecarga de operadores`, ampliando minha compreensão sobre a linguagem e seu potencial. 🚀
 
-## 📑 Resumo
-
-Continuarei a aprimorar este repositório, focando na `clareza e legibilidade dos códigos`, enquanto sigo praticando e aprofundando meus conhecimentos no paradigma da `Programação Orientada a Objetos`. 📝
-
 ## 🛠️ Contribuições
 
 Para contribuir com `<Prog_Orientada_Objetos_Cpp>`, siga estas etapas:
